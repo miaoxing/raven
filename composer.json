@@ -1,0 +1,15 @@
+{
+  "name": "miaoxing/raven",
+  "keywords": [
+    "miaoxing", "raven"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/plugin": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "miaoxing\\raven\\": ""
+    }
+  }
+}
