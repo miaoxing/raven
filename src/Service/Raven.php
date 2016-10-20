@@ -1,6 +1,6 @@
 <?php
 
-namespace miaoxing\raven\services;
+namespace Miaoxing\Raven\Service;
 
 use services\traits\Service;
 

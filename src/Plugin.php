@@ -1,6 +1,6 @@
 <?php
 
-namespace miaoxing\raven;
+namespace Miaoxing\Raven;
 
 /**
  * @link https://github.com/getsentry/raven-js
