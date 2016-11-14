@@ -9,7 +9,7 @@ class Raven extends Raven_Client
 {
     use Service;
 
-    public function __invoke($message, $params = array(), $level_or_options = array(), $stack = false, $vars = null)
+    public function __invoke($message, $params = [], $level_or_options = [], $stack = false, $vars = null)
     {
         return $this->captureMessage($message, $params, $level_or_options, $stack, $vars);
     }
@@ -18,6 +18,7 @@ class Raven extends Raven_Client
     {
         $url = parse_url($this->server);
         $url = $url['host'] . ($url['port'] ? ':' . $url['port'] : '');
+
         return sprintf('http://%s@%s/%s', $this->public_key, $url, $this->project);
     }
 
