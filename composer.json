@@ -1,5 +1,6 @@
 {
   "name": "miaoxing/raven",
+  "description": "Miaoxing Raven Plugin",
   "keywords": [
     "miaoxing", "raven"
   ],
@@ -12,5 +13,12 @@
     "psr-4": {
       "Miaoxing\\Raven\\": "src"
     }
-  }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Raven\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
