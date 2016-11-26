@@ -6,7 +6,7 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/plugin": "dev-master@dev",
+    "miaoxing/app": "dev-master@dev",
     "raven/raven": "^0.15.0"
   },
   "autoload": {
