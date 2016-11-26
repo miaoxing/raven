@@ -9,9 +9,9 @@ class Raven extends Raven_Client
 {
     use Service;
 
-    public function __invoke($message, $params = [], $level_or_options = [], $stack = false, $vars = null)
+    public function __invoke($message, $params = [], $levelOrOptions = [], $stack = false, $vars = null)
     {
-        return $this->captureMessage($message, $params, $level_or_options, $stack, $vars);
+        return $this->captureMessage($message, $params, $levelOrOptions, $stack, $vars);
     }
 
     public function getDsn()
@@ -19,6 +19,7 @@ class Raven extends Raven_Client
         $url = parse_url($this->server);
         $url = $url['host'] . ($url['port'] ? ':' . $url['port'] : '');
 
+        // @codingStandardsIgnoreLine
         return sprintf('http://%s@%s/%s', $this->public_key, $url, $this->project);
     }
 
@@ -27,7 +28,7 @@ class Raven extends Raven_Client
      *
      * {@inheritdoc}
      */
-    protected function is_http_request()
+    protected function is_http_request() // @codingStandardsIgnoreLine
     {
         return true;
     }
