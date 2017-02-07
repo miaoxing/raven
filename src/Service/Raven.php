@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Raven\Service;
 
-use Miaoxing\Plugin\Service;
+use Miaoxing\Plugin\Traits\Service;
 use Raven_Client;
 
 class Raven extends Raven_Client
