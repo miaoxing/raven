@@ -2,12 +2,12 @@
 
 namespace Miaoxing\Raven\Service;
 
-use Miaoxing\Plugin\Traits\Service;
+use Miaoxing\Plugin\Service\ServiceTrait;
 use Raven_Client;
 
 class Raven extends Raven_Client
 {
-    use Service;
+    use ServiceTrait;
 
     public function __invoke($message, $params = [], $levelOrOptions = [], $stack = false, $vars = null)
     {
