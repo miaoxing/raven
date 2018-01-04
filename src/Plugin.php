@@ -5,7 +5,7 @@ namespace Miaoxing\Raven;
 /**
  * @link https://github.com/getsentry/raven-js
  */
-class Plugin extends \miaoxing\plugin\BasePlugin
+class Plugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = 'Sentry,Raven集成';
 
