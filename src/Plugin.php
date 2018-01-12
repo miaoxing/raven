@@ -20,11 +20,11 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
      */
     protected $sampleRate = 1;
 
-    public function onInlineScript()
+    public function onScript()
     {
         $controller = $this->app->getController();
         if ($this->wei->isDebug() || strpos($controller, 'admin') !== false || $this->isHit()) {
-            $this->view->display('raven:raven/inlineScript.php');
+            $this->view->display('@raven/raven/script.php');
         }
     }
 
