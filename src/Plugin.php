@@ -13,28 +13,8 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
 
     protected $description = '包含raven的PHP,JS客户端';
 
-    /**
-     * 前端采样上报的概率
-     *
-     * @var float
-     */
-    protected $sampleRate = 1;
-
     public function onScript()
     {
-        $controller = $this->app->getController();
-        if ($this->wei->isDebug() || strpos($controller, 'admin') !== false || $this->isHit()) {
-            $this->view->display('@raven/raven/script.php');
-        }
-    }
-
-    /**
-     * 检查是否命中采样
-     *
-     * @return bool
-     */
-    protected function isHit()
-    {
-        return mt_rand(0, 100) <= $this->sampleRate * 100;
+        $this->display();
     }
 }
